@@ -109,20 +109,6 @@ int main()
 
     } while (opcao != '4');
 
-    contatos_txt = fopen("lista_contatos.txt", "w");
-    if (contatos_txt == NULL)
-    {
-        printf("Erro ao abrir o arquivo de texto da agenda de contatos.\n");
-        return 1;
-    }
-
-    for (int i = 0; i < id_contatos; i++)
-    {
-        fprintf(contatos_txt, "Nome: %s | Telefone: %s\n", lista[i].nome, lista[i].numero);
-    }
-
-    fclose(contatos_txt);
-
     contatos_bin = fopen("lista_contatos.bin", "wb");
     if (contatos_bin == NULL)
     {
